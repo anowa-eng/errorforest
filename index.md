@@ -39,8 +39,7 @@
 <body>
   <nav>
     <ul class="navigation-bar">
-      Errorforest
-      <li class="image"></li>
+      <span>Errorforest</span> <!-- Where is the image source of Errorforest logo -->
       <li>Home</li>
       <li>Editor</li>
     </ul>
