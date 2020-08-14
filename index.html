@@ -14,12 +14,12 @@
       --white: lightgrey;
       --green: #74bf50;
     }
-    nav ul {
+    nav div {
       background: grey;
       padding: 1px;
       width: 100vh;
     }
-    nav ul.navigation-bar li {
+    nav div.navigation-bar li {
       color: var(--white);
       list-style-type: none;
       display: inline;
@@ -30,7 +30,7 @@
       letter-spacing: 0.2em;
       transition: all linear .15s;
     }
-    nav ul.navigation-bar li:hover {
+    nav div.navigation-bar a:hover {
       color: var(--green);
     }
     nav {
@@ -41,11 +41,11 @@
 </head>
 <body>
   <nav>
-    <ul class="navigation-bar">
-      <span>Errorforest</span> <!-- Where is the image source of Errorforest logo -->
-      <li>Home</li>
-      <li>Editor</li>
-    </ul>
+    <div class="navigation-bar">
+      <a>Errorforest</a> <!-- Where is the image source of Errorforest logo -->
+      <a>Home</a>
+      <a>Editor</a>
+    </div>
   </nav>
 </body>
 </html>
