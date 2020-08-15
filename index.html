@@ -50,6 +50,20 @@
     </ul>
   </nav>
   <div class="content">
+    <script>
+      var CONTENT_ELEMENT = document.querySelectorAll('.content')[0];
+      CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main');
+      setInterval(function(){
+        switch(CONTENT) {
+          case "main":
+            CONTENT_ELEMENT.MAIN_SECTION.display = 'block';
+            break;
+          default:
+            for (let i; i = 0; i++) {
+              CONTENT_ELEMENT.children[i].display = 'none';
+            }
+      });
+    </script>
   <div class="main">
     <div class="welcome" style="text-align: center; padding: 10px; background: linear-gradient(#0a0, #0bb); color: white;">
       <h1>Welcome to ErrorForest</h1>
