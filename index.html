@@ -2,11 +2,11 @@
 <html lang="">
 <head>
   <meta charset="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=, initial-scale=">
   <title></title>
   <style>
     body {
-      background: white;
+      background: var(--white);
     }
     :root {
       --nexa: 'NexaRegular', sans-serif;
@@ -14,13 +14,14 @@
       --white: lightgrey;
       --green: #74bf50;
     }
-    nav div {
+    nav ul {
+      position: absolute;
       background: grey;
-      padding: 10px;
-      width: 100vh;
-      
+      margin: 0;
+      width: 100%;
+      padding: 5px;
     }
-    nav div.navigation-bar li {
+    nav ul.navigation-bar li {
       color: var(--white);
       list-style-type: none;
       display: inline;
@@ -31,22 +32,30 @@
       letter-spacing: 0.2em;
       transition: all linear .15s;
     }
-    nav div.navigation-bar a:hover {
-      color: var(--green);
-    }
-    nav {
-      position: sticky;
-      transform: translateY(-20);
+    nav ul.navigation-bar li:hover {
+      color: var(--green)
     }
   </style>
+  <script>
+    // Variable storage
+    var CONTENT;
+  </script>
 </head>
 <body>
   <nav>
-    <div class="navigation-bar">
-      <a>Errorforest</a> <!-- Where is the image source of Errorforest logo -->
-      <a onclick='menuItem = "main";'>Home</a>
-      <a onclick='menuItem = "editor";'>Editor</a>
-      <a onclick='menuItem = "settings"'>Preferences</a>
+    <ul class="navigation-bar">
+      Errorforest
+      <li class="image"></li>
+      <li onclick='CONTENT = "main";'>Home</li>
+      <li onclick='CONTENT = "editor";'>Editor</li>
+      <li onclick='CONTENT = "settings"'>Settings</li>
+    </ul>
+    <div class="page">
+      <p id="jd">
+        <script>
+          setInterval(function(){
+            document.getElementById('jd').innerHTML = CONTENT;
+          }, 5)
     </div>
   </nav>
 </body>
