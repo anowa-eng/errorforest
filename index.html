@@ -56,11 +56,11 @@
       setInterval(function(){
         switch(CONTENT) {
           case "main":
-            CONTENT_ELEMENT.MAIN_SECTION.display = 'block';
+            CONTENT_ELEMENT.MAIN_SECTION.style.display = 'block';
             break;
           default:
             for (let i; i = 0; i++) {
-              CONTENT_ELEMENT.children[i].display = 'none';
+              CONTENT_ELEMENT.children[i].style.display = 'none';
             }
       });
     </script>
