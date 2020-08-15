@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+  <script src="https://raw.githubusercontent.com/anowa-eng/errorforest/master/anticrash.js"></script>
   <meta charset="">
   <meta name="viewport" content="width=, initial-scale=">
   <title></title>
@@ -53,9 +54,9 @@
     <div class="page">
       <p id="jd">
         <script>
-          setInterval(function(){
-            document.getElementById('jd').innerHTML = CONTENT;
-          }, 5)
+          antiCrash.while(function(){
+            document.getElementById('jd').innerHTML = `<p>${CONTENT}</p>`;
+          });
         </script>
     </div>
   </nav>
