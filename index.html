@@ -56,7 +56,12 @@
       <li onclick='CONTENT = "editor";'>Editor</li>
       <li onclick='CONTENT = "settings"'>Settings</li>
     </ul>
-    <div>This is in dev</div>
+    <div class='content'>
+      <script>
+        setInterval(function(){
+          document.querySelector('.content').innerHTML = CONTENT;
+        }, 5);
+      </script>
   </nav>
 </body>
 
