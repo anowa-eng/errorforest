@@ -47,6 +47,9 @@
       Errorforest <!-- Where is the image source of Errorforest logo -->
       <a onclick="CONTENT = 'main'">Home</li>
       <a onclick="CONTENT = 'editor'">Editor</li>
+      <div style="float: right;">
+        <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; width: 100px; height; 100px;" />
+      </div>
     </ul>
   </nav>
   <div class="content">
@@ -61,6 +64,7 @@
           default:
             for (let i; i = 0; i++) {
               CONTENT_ELEMENT.children[i].style.display = 'none';
+            }
         }
       }, 5);
     </script>
@@ -76,7 +80,6 @@
           Start creating now <!-- This button does not do anything :/ -->
         </button>
       </div>
-      <span></span> <!-- This is so that .main will load -->
     </div>
   </div>
 </div>
