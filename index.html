@@ -46,7 +46,13 @@
       <li>Home</li>
       <li>Editor</li>
     </ul>
-    <span>Test</span>
+    <div class="content">
+      <script>
+        setInterval(function(){
+          document.querySelector('.content').innerHTML = CONTENT;
+        });
+      </script>
+    </div>
   </nav>
 </body>
 </html>
