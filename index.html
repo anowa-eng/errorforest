@@ -48,22 +48,14 @@
       <li onclick="CONTENT = 'main'">Home</li>
       <li onclick="CONTENT = 'editor'">Editor</li>
     </ul>
-    <div class="content">
-      <script>
-        var contentElement = document.querySelector('.content')
-        setInterval(function(){
-          switch(CONTENT) {
-            case "main":
-              if ('username' == new String()) {
-                contentElement = `<div style="background:#0a0;text-align:center;">
-  <h1>Welcome to ErrorForest</h1>
-  <p>Description</p>
-</div>`
-              break;
-          }
-        });
-      </script>
-    </div>
   </nav>
+    <div class="content">
+      <div class="main">
+        <div class="welcome" style="text-align: center; padding: 10px; background: linear-gradient(#0a0, #0bb); color: white;">
+          <h1>Welcome to ErrorForest</h1>
+          <p>Stuff</p>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
