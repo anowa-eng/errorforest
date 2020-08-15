@@ -50,8 +50,17 @@
     </ul>
     <div class="content">
       <script>
+        var contentElement = document.querySelector('.content')
         setInterval(function(){
-          document.querySelector('.content').innerHTML = CONTENT;
+          switch(CONTENT) {
+            case "main":
+              if ('username' == new String()) {
+                contentElement = `<div style="background:#0a0;text-align:center;">
+  <h1>Welcome to ErrorForest</h1>
+  <p>Description</p>
+</div>`
+              break;
+          }
         });
       </script>
     </div>
