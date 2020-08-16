@@ -3,7 +3,7 @@
 <head>
   <meta charset="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Errorforest</title>
   <style>
     body {
       background: white;
@@ -45,11 +45,12 @@
   <nav>
     <div class="navigation-bar">
       Errorforest <!-- Where is the image source of Errorforest logo -->
-      <a onclick="CONTENT = 'main'">Home</li>
-      <a onclick="CONTENT = 'editor'">Editor</li>
+      <a onclick="CONTENT = 'main'">Home</a>
+      <a onclick="CONTENT = 'editor'">Editor</a>
+      <a>Preferences</a>
       <div style="float: right; transform: translateY(20);">
         <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; display: inline; float: right;" alt="User" width="10" height="10"/>
-        <span class="username" style="text-transform: none; font-weight: bold; text-align: right;">Person</span>
+        <span class="username" style="text-transform: none; font-weight: bold; float: right;">Person</span>
         <!-- This feature is in development. Check back soon! (^-^) -->
       </div>
     </ul>
@@ -79,7 +80,8 @@
       </h1>
       <button>
         <script>
-          document.querySelector('.editor').children[2]
+          document.querySelector('.editor').children[2].addEventListener(function(){
+          });
         </script>
         New video
       </button>
