@@ -47,33 +47,14 @@
       Errorforest <!-- Where is the image source of Errorforest logo -->
       <a onclick="CONTENT = 'main'">Home</li>
       <a onclick="CONTENT = 'editor'">Editor</li>
-      <div style="float: right;">
-      <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; display: inline; float: right;" alt="User" width="10" height="10"/>
-      <span class="username" style="text-transform: none; font-weight: bold;">Person</span>
-      <script>
-        document.getElementsByClassName('username').innerHTML
-      </script>
+      <div style="float: right; transform: translateY(20);">
+        <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; display: inline; float: right;" alt="User" width="10" height="10"/>
+        <span class="username" style="text-transform: none; font-weight: bold;">Person</span>
         <!-- This feature is in development. Check back soon! (^-^) -->
       </div>
     </ul>
   </nav>
-  <div class="content" onload="var CONTENT_ELEMENT = document.querySelectorAll('.content')[0];
-      CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main');
-      CONTENT_ELEMENT.EDITOR_SECTION = document.querySelector('.editor');
-      setInterval(function(){
-        switch(CONTENT) {
-          case "main":
-            CONTENT_ELEMENT.MAIN_SECTION.style.display = 'block';
-            CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'none';
-            break;
-          case "editor":
-            CONTENT_ELEMENT.MAIN_SECTION.style.display = 'none';
-            CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'block';
-            break;
-          default:
-            throw new Error('That does not exist :/')
-        }
-      }, 5);">
+  <div class="content" onload="var CONTENT_ELEMENT=document.querySelectorAll(".content")[0];CONTENT_ELEMENT.MAIN_SECTION=document.querySelector(".main"),CONTENT_ELEMENT.EDITOR_SECTION=document.querySelector(".editor"),setInterval(function(){switch(CONTENT){case"main":CONTENT_ELEMENT.MAIN_SECTION.style.display="block",CONTENT_ELEMENT.EDITOR_SECTION.style.display="none";break;case"editor":CONTENT_ELEMENT.MAIN_SECTION.style.display="none",CONTENT_ELEMENT.EDITOR_SECTION.style.display="block";break;default:throw new Error("That does not exist :/")}},5);">
     <div class="main">
       <div class="welcome" style="text-align: center; padding: 10px; background: linear-gradient(#0a0, #0bb); color: white;">
         <h1>Welcome to ErrorForest</h1>
@@ -98,13 +79,6 @@
       </h1>
       <button style="padding:10px 15px;border-radius:60px; border: 1px solid; background: grey; text-transform:uppercase; transition: all linear .1s;" id="newVideo">
         New video
-        <script id="nvs">
-          let script = document.getElementById('nvs');
-          script.Parent = document.getElementById('newVideo');
-          script.Parent.addEventListener('click', function(){
-            CONTENT_ELEMENT.EDITOR_SECTION.innerHTML = "Coming soon";
-          });
-        </script>
       </button>
       </div>
     </div>
