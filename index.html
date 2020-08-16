@@ -48,7 +48,14 @@
       <a onclick="CONTENT = 'main'">Home</li>
       <a onclick="CONTENT = 'editor'">Editor</li>
       <div style="float: right;">
-        <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; width: 100px; height; 100px;" />
+        <a onclick="toggle();">
+          <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; width: 100px; height; 100px;" />
+          <script>
+            function toggle() {
+            }
+          </script>
+          <div class="workingmessage">This feature is in development</div>
+        </a>
       </div>
     </ul>
   </nav>
@@ -80,6 +87,11 @@
           Start creating now <!-- This button does not do anything :/ -->
         </button>
       </div>
+    </div>
+    <div class="editor">
+      <?php
+      echo "Something";
+      ?> 
     </div>
   </div>
 </div>
