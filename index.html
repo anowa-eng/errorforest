@@ -49,7 +49,7 @@
       <a onclick="CONTENT = 'editor'">Editor</li>
       <div style="float: right; transform: translateY(20);">
         <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; display: inline; float: right;" alt="User" width="10" height="10"/>
-        <span class="username" style="text-transform: none; font-weight: bold;">Person</span>
+        <span class="username" style="text-transform: none; font-weight: bold; text-align: right;">Person</span>
         <!-- This feature is in development. Check back soon! (^-^) -->
       </div>
     </ul>
@@ -75,9 +75,12 @@
         }
       </style>
       <h1>
-        What do you want to create?
+        What do you wish to create?
       </h1>
-      <button style="padding:10px 15px;border-radius:60px; border: 1px solid; background: grey; text-transform:uppercase; transition: all linear .1s;" id="newVideo">
+      <button>
+        <script>
+          document.querySelector('.editor').children[2]
+        </script>
         New video
       </button>
       </div>
