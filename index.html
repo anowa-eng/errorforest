@@ -48,14 +48,8 @@
       <a onclick="CONTENT = 'main'">Home</li>
       <a onclick="CONTENT = 'editor'">Editor</li>
       <div style="float: right;">
-        <a onclick="toggle();">
-          <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; width: 100px; height; 100px;" />
-          <script>
-            function toggle() {
-            }
-          </script>
-          <div class="workingmessage">This feature is in development</div>
-        </a>
+      <img src="https://www.iconsdb.com/icons/preview/black/user-xxl.png" style="border-radius: 50%; width: 100px; height; 100px;" />
+        <!-- This feature is in development. Check back soon! (^-^) -->
       </div>
     </ul>
   </nav>
@@ -63,15 +57,19 @@
     <script>
       var CONTENT_ELEMENT = document.querySelectorAll('.content')[0];
       CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main');
+      CONTENT_ELEMENT.EDITOR_SECTION = document.querySelector('.editor');
       setInterval(function(){
         switch(CONTENT) {
           case "main":
             CONTENT_ELEMENT.MAIN_SECTION.style.display = 'block';
+            CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'none';
+            break;
+          case "editor":
+            CONTENT_ELEMENT.MAIN_SECTION.style.display = 'none';
+            CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'block';
             break;
           default:
-            for (let i; i = 0; i++) {
-              CONTENT_ELEMENT.children[i].style.display = 'none';
-            }
+            throw new Error('That does not exist :/')
         }
       }, 5);
     </script>
@@ -89,9 +87,12 @@
       </div>
     </div>
     <div class="editor">
-      <?php
-      echo "Something";
-      ?> 
+      <script>
+        CONTENT_ELEMENT.EDITOR_SECTION.innerHTML = 
+        '<h1>What do you want to create</h1>' + '\n' +
+        '<h1>What do you want to create</h1>'
+      </script>
+      </div>
     </div>
   </div>
 </div>
