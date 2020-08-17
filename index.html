@@ -39,7 +39,12 @@
       transform: translateY(-20);
     }
   </style>
-  <script>var CONTENT = "main";</script>
+  <script>var CONTENT = "main";
+    var USERNAME;
+    setInterval(function(){
+      USERNAME = document.querySelector('span.username').innerHTML;
+    }, 5);
+  </script>
 </head>
 <body>
   <nav>
@@ -75,17 +80,17 @@
           background-color: gray;
         }
       </style>
-      <h1>
-        What do you wish to create?
+      <h1 onload='this.innerHTML = `Hello, ${USERNAME}.`'>
       </h1>
-      <button>
-        <script>
-          document.querySelector('.editor').children[2].addEventListener(function(){
-          });
-        </script>
-        New video
-      </button>
-      </div>
+      <p>
+        What do you want to do?
+      </p>
+      <form>
+        <input type="radio" id="scratch">
+        <label for="scratch">Start from scratch</label>
+        <input type="radio" id="import">
+        <label for="import">Import file</label>
+      </form>
     </div>
   </div>
 </div>
