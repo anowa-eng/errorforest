@@ -39,8 +39,21 @@
       transform: translateY(-20);
     }
   </style>
-  <script>var CONTENT = "main";
+  <script>
+    var NAVBAR_CLICKED = false;
+    var CONTENT = "main";
     var USERNAME;
+    for (let i = 0; i < document.querySelectorAll(`.content div:not(.main)`).length; i++) {
+      document.querySelectorAll(`.content div:not(.main)`)[i].style.display = 'none';
+    }
+    document.querySelector(`.main`).style.display = 'block';
+    await new Promise(() => {
+      let waitUntil = setInterval(function(){
+        if (NAVBAR_CLICKED == true) {
+          clearInterval(waitUntil);
+        }
+      });
+    });
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
       // Content display
@@ -53,7 +66,7 @@
 </head>
 <body>
   <nav>
-    <div class="navigation-bar">
+    <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;">
       Errorforest <!-- Where is the image source of Errorforest logo -->
       <a onclick="CONTENT = 'main';">Home</a>
       <a onclick="CONTENT = 'editor'">Editor</a>
