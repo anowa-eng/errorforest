@@ -43,6 +43,11 @@
     var USERNAME;
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
+      // Content display
+      for (let i = 0; i < document.querySelectorAll(`.content div:not(.${CONTENT})`).length; i++) {
+        document.querySelectorAll(`.content div:not(.${CONTENT})`)[i].style.display = 'none';
+      }
+      document.querySelector(`.${CONTENT}`).style.display = 'block';
     }, 5);
   </script>
 </head>
@@ -50,7 +55,7 @@
   <nav>
     <div class="navigation-bar">
       Errorforest <!-- Where is the image source of Errorforest logo -->
-      <a onclick="CONTENT = 'main'">Home</a>
+      <a onclick="CONTENT = 'main';">Home</a>
       <a onclick="CONTENT = 'editor'">Editor</a>
       <a>Preferences</a>
       <div style="float: right; transform: translateY(20);">
