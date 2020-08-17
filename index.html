@@ -66,17 +66,17 @@
     </ul>
   </nav>
   <div class="content" onload="
-                               var CONTENT_ELEMENT = document.querySelectorAll(".content")[0];
-CONTENT_ELEMENT.MAIN_SECTION = document.querySelector(".main"), CONTENT_ELEMENT.EDITOR_SECTION = document.querySelector(".editor"), setInterval(function() {
+                               var CONTENT_ELEMENT = document.querySelectorAll('.content')[0];
+CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main'), CONTENT_ELEMENT.EDITOR_SECTION = document.querySelector('.editor'), setInterval(function() {
   switch (CONTENT) {
-    case "main":
-      CONTENT_ELEMENT.MAIN_SECTION.style.display = "block", CONTENT_ELEMENT.EDITOR_SECTION.style.display = "none";
+    case 'main':
+      CONTENT_ELEMENT.MAIN_SECTION.style.display = 'block', CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'none';
       break;
-    case "editor":
-      CONTENT_ELEMENT.MAIN_SECTION.style.display = "none", CONTENT_ELEMENT.EDITOR_SECTION.style.display = "block";
+    case 'editor':
+      CONTENT_ELEMENT.MAIN_SECTION.style.display = 'none', CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'block';
       break;
     default:
-      throw new Error("That does not exist :/")
+      throw new Error('That does not exist :/')
   }
 }, 5);
                                ">
