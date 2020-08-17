@@ -43,17 +43,6 @@
     var NAVBAR_CLICKED = false;
     var CONTENT = "main";
     var USERNAME;
-    for (let i = 0; i < document.querySelectorAll(`.content div:not(.main)`).length; i++) {
-      document.querySelectorAll(`.content div:not(.main)`)[i].style.display = 'none';
-    }
-    document.querySelector(`.main`).style.display = 'block';
-    await new Promise(() => {
-      let waitUntil = setInterval(function(){
-        if (NAVBAR_CLICKED == true) {
-          clearInterval(waitUntil);
-        }
-      });
-    });
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
       // Content display
@@ -120,8 +109,9 @@ CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main'), CONTENT_ELEMENT.
       <form action="ef_action.js">
         <select style="padding: 10px; border-radius: 50px;">
           <option value="scr">Start from scratch</option>
-          <option value="scr">Import</option>
+          <option value="imp">Import</option>
         </select>
+        <input type="button"></input>
       </form>
     </div>
   </div>
