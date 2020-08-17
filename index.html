@@ -118,15 +118,10 @@ CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main'), CONTENT_ELEMENT.
         What do you want to do?
       </p>
       <form action="ef_action.js">
-        <div>
-          <input type="radio" id="scratch" value="blank" checked=false>
-          <label for="scratch">Start from scratch</label>
-        </div>
-        <div>
-          <input type="radio" id="import" value="import" checked=false>
-          <label for="import">Import file</label>
-        </div>
-        <input type="submit">
+        <select style="padding: 10px; border-radius: 50px;">
+          <option value="scr">Start from scratch</option>
+          <option value="scr">Import</option>
+        </select>
       </form>
     </div>
   </div>
