@@ -50,7 +50,12 @@
         document.querySelectorAll(`.content div:not(.${CONTENT})`)[i].style.display = 'none';
       }
       document.querySelector(`.${CONTENT}`).style.display = 'block';
+      if (document.querySelector('.main').style.display == 'none' && CONTENT == 'main') {
+        document.querySelector('.main').style.display = 'block';
+      }
     }, 5);
+  </script>
+  <script>
   </script>
 </head>
 <body>
@@ -71,11 +76,13 @@
                                var CONTENT_ELEMENT = document.querySelectorAll('.content')[0];
 CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main'), CONTENT_ELEMENT.EDITOR_SECTION = document.querySelector('.editor'), setInterval(function() {
   switch (CONTENT) {
-    case 'main':
-      CONTENT_ELEMENT.MAIN_SECTION.style.display = 'block', CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'none';
+    case 'home':
+      CONTENT_ELEMENT.MAIN_SECTION.style.display = 'block';
+      CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'none';
       break;
     case 'editor':
-      CONTENT_ELEMENT.MAIN_SECTION.style.display = 'none', CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'block';
+      CONTENT_ELEMENT.MAIN_SECTION.style.display = 'none';
+      CONTENT_ELEMENT.EDITOR_SECTION.style.display = 'block';
       break;
     default:
       throw new Error('That does not exist :/')
@@ -103,16 +110,7 @@ CONTENT_ELEMENT.MAIN_SECTION = document.querySelector('.main'), CONTENT_ELEMENT.
       </style>
       <h1 onload='this.innerHTML = `Hello, ${USERNAME}.`'>
       </h1>
-      <p>
-        What do you want to do?
-      </p>
-      <form action="ef_action.js">
-        <select style="padding: 10px; border-radius: 50px;">
-          <option value="scr">Start from scratch</option>
-          <option value="imp">Import</option>
-        </select>
-        <input type="button"></input>
-      </form>
+      <button
     </div>
   </div>
 </div>
