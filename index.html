@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Errorforest</title>
   <style>
@@ -41,7 +41,7 @@
   </style>
   <script>
     var NAVBAR_CLICKED = false;
-    var CONTENT = "main";
+    var CONTENT = 'mainpg';
     var USERNAME;
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
@@ -49,13 +49,7 @@
       for (let i = 0; i < document.querySelectorAll(`.content div:not(.${CONTENT})`).length; i++) {
         document.querySelectorAll(`.content div:not(.${CONTENT})`)[i].style.display = 'none';
       }
-      document.querySelector(`.${CONTENT}`).style.display = 'block';
-      if (document.querySelector('.main').style.display == 'none' && CONTENT == 'main') {
-        document.querySelector('.main').style.display = 'block';
-        for (let i = 0; document.querySelector('.main').children.length; i++) {
-          document.querySelector('.main').children[i].style.display = 'block';
-        }
-      }
+      document.querySelector(`.content > .${CONTENT}`).style.display = 'block';
     }, 5);
   </script>
   <script>
@@ -65,7 +59,7 @@
   <nav>
     <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;">
       Errorforest <!-- Where is the image source of Errorforest logo -->
-      <a onclick="CONTENT = 'main'">Home</a>
+      <a onclick="CONTENT = 'mainpg'">Home</a>
       <a onclick="CONTENT = 'editor'">Editor</a>
       <a>Preferences</a>
       <div style="float: right; transform: translateY(20);">
@@ -76,7 +70,7 @@
     </ul>
   </nav>
   <div class="content">
-    <div class="main">
+    <div class="mainpg">
       <div class="welcome" style="text-align: center; padding: 10px; background: linear-gradient(#0a0, #0bb); color: white;">
         <h1>Welcome to ErrorForest</h1>
         <p>
