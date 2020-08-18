@@ -48,7 +48,7 @@
       USERNAME = document.querySelector('span.username').innerHTML;
       // Content display
       $(`.content .${CONTENT}`).show();
-      $(`.content div:not(.${CONTENT})`).hide();
+      $(`.content *:not(*.${CONTENT})`).hide();
     }, 5);
   </script>
   <script>
