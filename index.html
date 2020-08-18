@@ -3,6 +3,7 @@
 <head>
   <meta charset="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <title>Errorforest</title>
   <style>
     body {
@@ -46,10 +47,8 @@
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
       // Content display
-      for (let i = 0; i < document.querySelectorAll(`.content div:not(.${CONTENT})`).length; i++) {
-        document.querySelectorAll(`.content div:not(.${CONTENT})`)[i].style.display = 'none';
-      }
-      document.querySelector(`.content > .${CONTENT}`).style.display = 'block';
+      $(`.content div:not(.${CONTENT})`)[i].hide();
+      $(`.content .${CONTENT}`).show();
     }, 5);
   </script>
   <script>
@@ -91,9 +90,8 @@
       </style>
       <h1 onload='this.innerHTML = `Hello, ${USERNAME}.`'>
       </h1>
-      <button
+      <button>
     </div>
-  </div>
 </div>
 </body>
 </html>
