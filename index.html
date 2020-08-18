@@ -52,6 +52,9 @@
       document.querySelector(`.${CONTENT}`).style.display = 'block';
       if (document.querySelector('.main').style.display == 'none' && CONTENT == 'main') {
         document.querySelector('.main').style.display = 'block';
+        for (let i = 0; document.querySelector('.main').children.length; i++) {
+          document.querySelector('.main').children[i].style.display = 'block';
+        }
       }
     }, 5);
   </script>
