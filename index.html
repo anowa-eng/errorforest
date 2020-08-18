@@ -47,8 +47,8 @@
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
       // Content display
-      $(`.content div:not(.${CONTENT})`)[i].hide();
       $(`.content .${CONTENT}`).show();
+      $(`.content div:not(.${CONTENT})`).hide();
     }, 5);
   </script>
   <script>
