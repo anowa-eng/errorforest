@@ -52,7 +52,7 @@
     $(document).ready(function(){
       setInterval(function(){
         $('.content > *').hide();
-        $('.content > .' + CONTENT).show();
+        $('.content > [class="' + CONTENT + '"]').show();
       });
     });
   </script>
