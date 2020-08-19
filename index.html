@@ -47,8 +47,8 @@
   </style>
   <script>
     setInterval(function(){
-      $('.content .' + CONTENT).show();
-      $('.content *:not(.' + CONTENT + ')').hide();
+      $('.content [class="' + CONTENT + '"]').show();
+      $('.content div:not([class="' + CONTENT + '"]').hide();
     }, 5);
   </script>
 </head>
