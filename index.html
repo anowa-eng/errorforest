@@ -48,9 +48,8 @@
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
       // Content display
-      $(`.content *.${CONTENT}`).show();
-      $(`.content *.${CONTENT} *`).show();
-      $(`.content *:not(*.${CONTENT})`).hide();
+      $(`.content > *.${CONTENT}`).show();
+      $(`.content > *:not(*.${CONTENT})`).hide();
     }, 5);
   </script>
   <script>
@@ -80,7 +79,7 @@
           platform where you can create Errors and share them to the world.
         </p>
         <button style="padding:10px 15px;border-radius:60px; border: 1px solid; background: none; text-transform:uppercase; transition: all linear .1s;" id="create" onmouseover='this.color = "white";' onclick='CONTENT = "editor"'>
-          Start creating now <!-- This button does not do anything :/ -->
+          Start creating now
         </button>
       </div>
     </div>
