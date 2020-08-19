@@ -43,7 +43,7 @@
   </style>
   <script>
     var NAVBAR_CLICKED = false;
-    var CONTENT = 'mainpg';
+    var CONTENT = 'main';
     var USERNAME;
     setInterval(function(){
       USERNAME = document.querySelector('span.username').innerHTML;
@@ -59,7 +59,7 @@
   <nav>
     <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;">
       Errorforest <!-- Where is the image source of Errorforest logo -->
-      <a onclick="CONTENT = 'mainpg'">Home</a>
+      <a onclick="CONTENT = 'main'">Home</a>
       <a onclick="CONTENT = 'editor'">Editor</a>
       <a>Preferences</a>
       <div style="float: right; transform: translateY(20);">
@@ -70,7 +70,7 @@
     </ul>
   </nav>
   <div class="content">
-    <div class="mainpg">
+    <div class="main">
       <div class="welcome" style="text-align: center; padding: 10px; background: linear-gradient(#0a0, #0bb); color: white;">
         <h1>Welcome to ErrorForest</h1>
         <p>
@@ -89,9 +89,7 @@
           background-color: gray;
         }
       </style>
-      <h1 onload='this.innerHTML = `Hello, ${USERNAME}.`'>
-      </h1>
-      <button>
+      <button>Start from scratch</button>
     </div>
 </div>
 </body>
