@@ -45,6 +45,12 @@
       color: white;
     }
   </style>
+  <script>
+    setInterval(function(){
+      $('.content .' + CONTENT).show();
+      $('.content *:not(.' + CONTENT + ')').hide();
+    }, 5);
+  </script>
 </head>
 <body>
   <nav>
