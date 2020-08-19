@@ -1,0 +1,5 @@
+Rules:
+
+1) Do not vandalise this repository.
+2) Do not borrow code from Vyond. (Vyond Terms of Service, section 4)
+3) Contributors are not allowed to inflict cyberbullying on one(s).
