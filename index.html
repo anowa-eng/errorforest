@@ -51,20 +51,15 @@
   <script>
     $(document).ready(function(){
       setInterval(function(){
-        for (let i = 0; i < $('.content').children().length; i++) {
-          if ($('.content').children()[i].attr('class') == CONTENT) {
-            $('.content').children()[i].show();
-          } else {
-            $('.content').children()[i].hide();
-          }
-        }
+        $('.content *').hide();
+        $('.content .' + CONTENT).show();
       });
     });
   </script>
 </head>
 <body>
   <nav>
-    <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;">
+    <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;" data-role="navbar">
       Errorforest <!-- Where is the image source of Errorforest logo -->
       <a onclick="CONTENT = 'main'">Home</a>
       <a onclick="CONTENT = 'editor'">Editor</a>
