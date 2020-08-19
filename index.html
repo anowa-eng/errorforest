@@ -52,7 +52,7 @@
     $(document).ready(function(){
       setInterval(function(){
         for (let i = 0; i < $('.content').children().length; i++) {
-          if ($('.content').children()[i].hasClass(CONTENT)) {
+          if ($('.content').children()[i].attr('class') == CONTENT) {
             $('.content').children()[i].show();
           } else {
             $('.content').children()[i].hide();
