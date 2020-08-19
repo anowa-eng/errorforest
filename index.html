@@ -37,7 +37,6 @@
     }
     nav {
       margin: 0;
-      width: 100vh;
       transform: translateY(-20);
       position: sticky;
     }
@@ -52,6 +51,9 @@
   <script>
     $(document).ready(function(){
       setInterval(function(){
+        $('nav').css({
+          "width": $(window).width()
+        });
         $('.content > *').hide();
         $('.content > [class="' + CONTENT + '"]').show();
       });
