@@ -39,7 +39,6 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
       transform: translateY(-20);
     }
     .purple {
@@ -52,6 +51,10 @@
   </script>
   <script>
     $(document).ready(function(){
+      $('nav').offset({
+        "top": 10;
+        "left": 0;
+      });
       setInterval(function(){
         $('.content > *').hide();
         $('.content > [class="' + CONTENT + '"]').show();
