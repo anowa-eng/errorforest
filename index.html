@@ -39,6 +39,8 @@
       margin: 0;
       transform: translateY(-20);
       position: sticky;
+      top: 0;
+      left: 0;
     }
     .purple {
       background: linear-gradient(#b0b, purple);
@@ -51,9 +53,6 @@
   <script>
     $(document).ready(function(){
       setInterval(function(){
-        $('nav').css({
-          "width": $(window).width()
-        });
         $('.content > *').hide();
         $('.content > [class="' + CONTENT + '"]').show();
       });
