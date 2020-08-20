@@ -99,12 +99,12 @@
               <p>or...</p>
             </td></tr><tr><td>
               <button class="purple" onclick="document.getElementById('import').click();">Import file</button>
-              <input type="file" id="import" style="display: none;" accept="application/json" onclick="async function saveFile() {
+              <input type="file" id="import" style="display: none;" accept="application/json" onclick='async function saveFile() {
                                                                                                          let formData = new FormData();           
                                                                                                          formData.append("file", file.files[0]);
-                                                                                                         await fetch('addFile.do', {method: "POST", body: formData});    
+                                                                                                         await fetch("addFile.do", {method: "POST", body: formData});    
                                                                                                          alert("Data Uploaded: ");
-                                                                                                       }">
+                                                                                                       }'>
             </td>
           </tr>
         </tbody>
