@@ -104,10 +104,11 @@
               <p>or...</p>
             </td></tr><tr><td>
               <div class="purple" onclick="document.getElementById('import').click();">Paste JSON</button>
+        </div>
               <input type="text" id="paste">
               <script>
                 $('#paste:focus').keypress(function(event){
-                  if (ctrlDown && (event.keyCode == cKey)) alert('caught you!')
+                  if (ctrlDown && (event.keyCode == 'cKey')) alert('caught you!')
                 });
               </script>
             </td>
