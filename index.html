@@ -95,23 +95,17 @@
           background-color: gray;
         }
       </style>
+      <script>
+        $('#create').click(function(){
+          $(document).text('w');
+        });
+      </script>
       <table>
         <tbody>
           <tr>
             <td>
               <button class="purple" id="create">
                 Create new error
-                <script>
-                  $(document).ready(function(){
-                    $('#create').click(function() {
-                      $('.editor').append(`
-                      <div style="background-color: red; border-top-left-radius: 5px; border-top-right-radius: 5px;">
-                        <h1>Name your thing</h1>
-                      </div>
-                      `);
-                    });
-                  });
-                </script>
               </button>
             </td></tr><tr><td>
               <p>or...</p>
