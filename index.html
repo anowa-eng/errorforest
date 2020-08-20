@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta charset="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.x-git.min.js"></script>
@@ -57,6 +56,34 @@
     *[class^="w3"],h1,h2,h3,h4,h5,h6 {
       font-family: var(--nexa);
     }
+    .inputreq {
+      animation: s 0.5s ease-out;
+    }
+    .inputreq div:nth-of-type(1) {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background: linear-gradient(#777, #555);
+      font-weight: bold;
+      font-size: 30pt;
+      text-align: center;
+    }
+    .inputreq div:nth-of-type(2) {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background: #333;
+    }
+    .inputreq div:nth-of-type(2) input {
+      padding: 10px;
+      border-radius: 50px;
+    }
+    @keyframes s {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
   </style>
   <script>
     var CONTENT = 'main';
@@ -99,8 +126,8 @@
           background-color: gray;
         }
       </style>
-      <div class="w3-round-xlarge w3-animate-zoom">
-        <div style="border-top-left-radius: 5px; border-top-right-radius: 5px; background: #999; width: 60vw;" class="w3-padding">
+      <div class="inputreq">
+        <div>
           <h2 style="font-weight: bold;">Name your Error</h1>
         </div>
       </div>
