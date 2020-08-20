@@ -107,6 +107,16 @@
         </div>
               <input type="text" id="paste">
               <script>
+                var ctrlDown = false,
+                ctrlKey = 17,
+                cmdKey = 91,
+                vKey = 86,
+                cKey = 67;
+                $(document).keydown(function(e) {
+                  if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
+                }).keyup(function(e) {
+                    if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
+                });
                 $('#paste:focus').keypress(function(event){
                   if (ctrlDown && (event.keyCode == 'cKey')) alert('caught you!')
                 });
