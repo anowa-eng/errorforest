@@ -99,7 +99,7 @@
               <p>or...</p>
             </td></tr><tr><td>
               <button class="purple" onclick="document.getElementById('import').click(); document.getElementById('su').click();">Import file</button>
-              <form action="actionpage.php">
+              <form action="<?php echo $_SERVER['PHP_SELF'];?>">
                 <input type="file" id="import" name="import" style="display: none;">
                 <input type="submit" id="su" style="display: none;">
               </form>
