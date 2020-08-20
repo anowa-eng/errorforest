@@ -74,18 +74,6 @@
       <a onclick="CONTENT = 'main'">Home</a>
       <a onclick="CONTENT = 'editor'">Editor</a>
     </div>
-    <div style="border-radius: 0px 0px 10px 10px" id="pref">
-      <h1>Preferences</h1>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <h1>Language</h1>
-            </td>
-            <div id="google_translate_element"></div>
-          </tr>
-        </tbody>
-    </div>
   </nav>
   <div class="content">
     <div class="main">
@@ -107,6 +95,25 @@
           background-color: gray;
         }
       </style>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <button class="purple">Create new error</button>
+            </td></tr><tr><td>
+              <p>or...</p>
+            </td></tr><tr><td>
+              <button class="purple" onclick="document.getElementById('import').click();">Import file</button>
+              <input type="file" id="import" style="display: none;" accept="application/json" onclick="async function saveFile() {
+                                                                                                         let formData = new FormData();           
+                                                                                                         formData.append(&quot;file&quot;, file.files[0]);
+                                                                                                         await fetch(&quot;addFile.do&quot;, {method: &quot;POST&quot;, body: formData});    
+                                                                                                         alert(&quot;Data Uploaded: &quot;);
+                                                                                                       } saveFile();">
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </body>
