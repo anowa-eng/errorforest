@@ -126,8 +126,7 @@
 
                   // Document Ctrl + C/V 
                   $(document).keydown(function(e) {
-                      if (ctrlDown && (e.keyCode == cKey)) console.log("Document catch Ctrl+C");
-                      if (ctrlDown && (e.keyCode == vKey)) console.log("Document catch Ctrl+V");
+                      if (ctrlDown && (e.keyCode == vKey)) console.log(JSON.parse($('#paste').val());
                   });
               });
               </script>
