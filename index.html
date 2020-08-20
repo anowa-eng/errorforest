@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
   <meta charset="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.x-git.min.js"></script>
@@ -98,7 +102,7 @@
           background-color: gray;
         }
       </style>
-      <div class="inputreq">
+      <div class="inputreq animate__animated animate__zoomIn">
         <div style="border-top-left-radius: 7px; border-top-left-radius: 7px;">
           <h2 style="font-weight: bold;">Name your Error</h1>
         </div>
@@ -109,21 +113,6 @@
             <td>
               <button class="purple" id="create">
                 Create new error
-                <script>
-                  $(document).ready(function(){
-                    $('.inputreq').eq(0).hide();
-                    $('.inputreq').eq(0).css('transform', 'scale(0)');
-                    $('.purple').eq(0).click(function(){
-                      $('.inputreq').eq(0).show();
-                      $('.inputreq').eq(0).animate({
-                        "transform": "scale(1)"
-                      , "-webkit-transform": "scale(1)"
-                      , "-moz-transform": "scale(1)"
-                      , "-o-transform": "scale(1)"
-                      }, 750, 'ease-out');
-                    });
-                  });
-                </script>
               </button>
             </td></tr><tr><td>
               <p>or...</p>
