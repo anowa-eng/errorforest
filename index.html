@@ -20,7 +20,6 @@
     nav div {
       background: grey;
       padding: 10px;
-      position: absolute;
     }
     nav div.navigation-bar a {
       color: var(--white);
@@ -39,7 +38,7 @@
     nav {
       margin: 0;
       transform: translateY(-20);
-      position: sticky;
+      left:0;top:0;
     }
     .purple {
       background: linear-gradient(#b0b, purple);
@@ -51,6 +50,7 @@
     .content, .navigation-bar {
       text-align: center;
       width: 100vw;
+      position: fixed;
     }
   </style>
   <script>
