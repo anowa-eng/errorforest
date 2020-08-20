@@ -109,6 +109,18 @@
             <td>
               <button class="purple" id="create">
                 Create new error
+                <script>
+                  $(document).ready(function(){
+                    $('.inputreq').eq(0).hide();
+                    $('.inputreq').eq(0).css('transform', 'scale(0)');
+                    $('.purple').eq(0).click(function(){
+                      $('.inputreq').eq(0).show();
+                      $('.inputreq').eq(0).animate({
+                        "transform": "scale(1)"
+                      }, 750, 'easeOut');
+                    });
+                  });
+                </script>
               </button>
             </td></tr><tr><td>
               <p>or...</p>
