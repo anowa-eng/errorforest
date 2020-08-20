@@ -103,7 +103,7 @@
                 Create new error
                 <script>
                   $('#create').click(function() {
-                    $(document).append('<div style="background-color: red;">' + '\n' +
+                    $('.editor').append('<div style="background-color: red;">' + '\n' +
                       '  <h1>' + '\n' +
                       '    Name your error' + '\n' +
                       '  </h1>' + '\n' +
@@ -130,7 +130,7 @@
                       cmdKey = 91,
                       vKey = 86,
                       cKey = 67;
-
+                  
                   $(document).keydown(function(e) {
                       if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
                   }).keyup(function(e) {
