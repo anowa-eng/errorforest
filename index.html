@@ -56,34 +56,6 @@
     *[class^="w3"],h1,h2,h3,h4,h5,h6 {
       font-family: var(--nexa);
     }
-    .inputreq {
-      animation: s 0.5s ease-out;
-    }
-    .inputreq div:nth-of-type(1) {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      background: linear-gradient(#777, #555);
-      font-weight: bold;
-      font-size: 15pt;
-      text-align: center;
-    }
-    .inputreq div:nth-of-type(2) {
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      background: #333;
-    }
-    .inputreq div:nth-of-type(2) input {
-      padding: 10px;
-      border-radius: 50px;
-    }
-    @keyframes s {
-      from {
-        transform: scale(0);
-      }
-      to {
-        transform: scale(1);
-      }
-    }
   </style>
   <script>
     var CONTENT = 'main';
@@ -127,7 +99,7 @@
         }
       </style>
       <div class="inputreq">
-        <div>
+        <div style="border-top-left-radius: 7px; border-top-left-radius: 7px;" class="w3-padding w3-animate-zoom">
           <h2 style="font-weight: bold;">Name your Error</h1>
         </div>
       </div>
