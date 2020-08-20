@@ -76,15 +76,6 @@
       <a onclick="CONTENT = 'editor'">Editor</a>
       <a id="settings">
         Preferences
-        <script>
-          $(document).ready(function(){
-            $('#settings').click(function(){
-              $('#pref')
-                .show()
-                .fadeIn(100);
-            });
-          });
-        </script>
       </a>
     </div>
     <div style="border-radius: 0px 0px 10px 10px" id="pref">
@@ -120,25 +111,6 @@
           background-color: gray;
         }
       </style>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <button class="purple">Create new error</button>
-            </td></tr><tr><td>
-              <p>or...</p>
-            </td></tr><tr><td>
-              <button class="purple" onclick="document.getElementById('import').click();">Import file</button>
-              <input type="file" id="import" style="display: none;" accept="application/json" onclick='async function saveFile() {
-                                                                                                         let formData = new FormData();           
-                                                                                                         formData.append("file", file.files[0]);
-                                                                                                         await fetch("addFile.do", {method: "POST", body: formData});    
-                                                                                                         alert("Data Uploaded: ");
-                                                                                                       } saveFile();'>
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </body>
