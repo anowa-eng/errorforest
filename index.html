@@ -50,14 +50,13 @@
     }
     .content, .navigation-bar {
       text-align: center;
-      width: 100vw;
-      position: absolute;
     }
   </style>
   <script>
     var CONTENT = 'main';
   </script>
   <script>
+    $('.content').css('width', $('.content').css('width'));
     $(document).ready(function(){
       setInterval(function(){
         $('.content > *').hide();
