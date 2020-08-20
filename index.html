@@ -102,12 +102,14 @@
               <button class="purple" id="create">
                 Create new error
                 <script>
-                  $('#create').click(function() {
-                    $('.editor').append(`
-                    <div style="background-color: red; border-top-left-radius: 5px; border-top-right-radius: 5px;">
-                      <h1>Name your thing</h1>
-                    </div>
-                    `);
+                  $(document).ready(function(){
+                    $('#create').click(function() {
+                      $('.editor').append(`
+                      <div style="background-color: red; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                        <h1>Name your thing</h1>
+                      </div>
+                      `);
+                    });
                   });
                 </script>
               </button>
