@@ -90,10 +90,20 @@
           background-color: gray;
         }
       </style>
-      <button class="purple">Create new error</button>
-      <p>or...</p>
-      <button class="purple" onclick="document.querySelector('import').click()">Import file</button>
-      <input type="file" id="import" style="display: none;">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <button class="purple">Create new error</button>
+            </td></tr><tr><td>
+              <p>or...</p>
+            </td></tr><tr><td>
+              <button class="purple" onclick="document.querySelector('import').click()">Import file</button>
+              <input type="file" id="import" style="display: none;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </body>
