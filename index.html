@@ -102,7 +102,7 @@
           background-color: gray;
         }
       </style>
-      <div class="inputreq animate__animated animate__zoomIn">
+      <div class="inputreq">
         <div style="border-top-left-radius: 7px; border-radius: 7px 7px 0px 0px; padding: 2px; width: 50vw; background: #999">
           <p style="font-size: 20pt; margin: 0;">Name your Error</h1>
         </div>
@@ -113,6 +113,11 @@
             <td>
               <button class="purple" id="create">
                 Create new error
+                <script>
+                  $('#create').click(function(){
+                    alert('Test')
+                  });
+                </script>
               </button>
             </td></tr><tr><td>
               <p>or...</p>
