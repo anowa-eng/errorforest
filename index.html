@@ -119,7 +119,11 @@
                                                           $(".inputreq").eq(0).show();
                                                           $(".inputreq").eq(0).attr({
                                                             class: "inputreq animate__animated animate__zoomIn"
-                                                          });'>
+                                                          });
+                                                          setTimeout(function(){
+                                                            $(".inputreq").hide();
+                                                          }, 1e3)
+                                                          '>
                 Create new error
               </button>
             </td></tr><tr><td>
