@@ -176,6 +176,7 @@
                 <td>
                   <button class="purple" onclick="
                                                   if ($('.inputreq:nth-of-type(1) input').val() != new String()) {
+                                                    sessionStorage.setItem('project', {});
                                                     sessionStorage.project.name = $('.inputreq:nth-of-type(1) input').val();
                                                   } else {
                                                     $('.inputreq:nth-of-type(1) input').attr({class: 'animate__animated animate__shakeX'})
