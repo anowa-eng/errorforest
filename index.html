@@ -114,7 +114,13 @@
         <tbody>
           <tr>
             <td>
+              <script>
+                $(document).ready(function(){
+                  $(".inputreq").eq(0).show();
+                });
+              </script>
               <button class="purple" id="create" onclick='
+                                                          $(".inputreq").eq(0).show();
                                                           $(".inputreq").eq(0).attr({
                                                             class: "inputreq animate__animated animate__zoomIn"
                                                           });'>
