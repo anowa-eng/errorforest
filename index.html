@@ -119,11 +119,7 @@
                                                           $(".inputreq").eq(0).show();
                                                           $(".inputreq").eq(0).attr({
                                                             class: "inputreq animate__animated animate__zoomIn"
-                                                          });
-                                                          setTimeout(function(){
-                                                            $(".inputreq").hide();
-                                                          }, 1e3)
-                                                          '>
+                                                          });'>
                 Create new error
               </button>
             </td></tr><tr><td>
@@ -177,7 +173,14 @@
                 </td><td>
                   <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq").attr({
                                                                                                      class: "inputreq animate__animated animate__fadeOut"
-                                                                                                   })'>Cancel</button>
+                                                                                                   })
+                                                                                                   setTimeout(function(){
+                                                                                                     $(".inputreq.animate__animated.animate__fadeOut").hide();
+                                                                                                     $(".inputreq.animate__animated.animate__fadeOut").attr({
+                                                                                                       class: "inputreq"
+                                                                                                     });
+                                                                                                   }, 1e3)
+                                                                                                   '>Cancel</button>
                 </td>
               </tr>
             </tbody>
