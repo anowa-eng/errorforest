@@ -175,14 +175,7 @@
               <tr>
                 <td>
                   <button class="purple" onclick="
-                                                  if ($('.inputreq:nth-of-type(1) input').val != '') {
-                                                    sessionStorage.setItem('project', {
-                                                      'name': $('.inputreq:nth-of-type(1) input').val(),
-                                                      'json': {}
-                                                    });
-                                                  } else {
-                                                    $('.inputreq:nth-of-type(1) input').attr({class: animate__animated animate__shakeX});
-                                                  }
+                                                  loadEditor();
                                                   ">Done</button>
                 </td><td>
                   <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq").attr({
