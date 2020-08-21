@@ -175,26 +175,23 @@
               <tr>
                 <td>
                   <button class="purple" onclick="
-                                                  if ($('.inputreq:nth-of-type(1) input').val() != new String()) {
-                                                    sessionStorage.setItem('project', {
-                                                      'name': 
-                                                    });
+                                                  if ($('.inputreq:nth-of-type(1) input').val != '') {
+                                                    sessionStorage.setItem('project', {});
                                                     sessionStorage.project.name = $('.inputreq:nth-of-type(1) input').val();
                                                   } else {
-                                                    $('.inputreq:nth-of-type(1) input').attr({class: 'animate__animated animate__shakeX'})
-                                                    setTimeout(function(){
-                                                      $('.animate__animated.animate__shakeX').eq(0).attr({class: new String()})
-                                                    }, 1000);
+                                                    $('.inputreq:nth-of-type(1) input').attr({class: animate__animated animate__shakeX});
                                                   }
-                                                 ">Done</button>
+                                                  ">Done</button>
                 </td><td>
-                  <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq").attr({class: "inputreq animate__animated animate__fadeOut"});
+                  <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq").attr({
+                                                                                                     class: "inputreq animate__animated animate__fadeOut"
+                                                                                                   })
                                                                                                    setTimeout(function(){
                                                                                                      $(".inputreq.animate__animated.animate__fadeOut").hide();
                                                                                                      $(".inputreq.animate__animated.animate__fadeOut").attr({
                                                                                                        class: "inputreq"
                                                                                                      });
-                                                                                                   }, 1000)
+                                                                                                   }, 1000);
                                                                                                    '>Cancel</button>
                 </td>
               </tr>
