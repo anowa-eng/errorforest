@@ -168,12 +168,9 @@
                 <td>
                   <button class="purple">Done</button>
                 </td><td>
-                  <button class="purple" style="background: linear-gradient(#555, #999);" onclick='
-                                                                                                   $(".inputreq").eq(0).fadeOut();
-                                                                                                   setTimeout(function(){
-                                                                                                    $(".inputreq").eq(0).hide()
-                                                                                                   }, 400);
-                                                                                                   '>Cancel</button>
+                  <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq")({
+                                                                                                     class: "inputreq animate__animated animate__fadeOut"
+                                                                                                   })'>Cancel</button>
                 </td>
               </tr>
             </tbody>
