@@ -111,7 +111,10 @@
         <tbody>
           <tr>
             <td>
-              <button class="purple" id="create" onclick="alert('yes');">
+              <button class="purple" id="create" onclick='
+                                                          $(".inputreq").eq(0).attr({
+                                                            class: "inputreq animate__animated animate__zoomIn"
+                                                          });'>
                 Create new error
               </button>
             </td></tr><tr><td>
