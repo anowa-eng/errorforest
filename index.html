@@ -44,8 +44,6 @@
       transform: translateY(-20);
       left: 0;
       top: 0;
-      position: -webkit-sticky;
-      position: sticky;
     }
     .purple {
       background: linear-gradient(#b0b, purple);
@@ -84,8 +82,8 @@
 </head>
 <body>
   <nav>
-    <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;" data-role="navbar">
-      <a style="position: absolute; left: 20px; top: 2px;" onload="setInterval(function(){$(this).css({position: 'absolute', left: '20px', top: '2px'"});});">
+    <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;" data-role="navbar" style="position: -webkit-sticky; position: sticky;">
+      <a style="position: absolute; left: 20px; top: 2px;">
         <!-- Credit is given to the user Dayton2949 for the Errorforest logo image -->
         <svg 
              version="1.1" 
