@@ -1,4 +1,5 @@
 # errorforest
-== What is Errorforest? ==
-Errorforest is planned to be an Error maker with a lot of stuff
-Go visit the studio
+## What is Errorforest?
+Errorforest was planned in the studio 
+
+Go visit the studio *[1,000 Managers = The Launch of ErrorForest!](https://scratch.mit.edu/studios/26884937/)*.
