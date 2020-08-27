@@ -1,6 +1,6 @@
 // Get query value in website query string – just in case
 // Borrowed from Chris's post "Get URL Variables"
-function getQueryVariable(variable) {
+function Q(variable) {
        var query = window.location.search.substring(1);
        var vars = query.split("&");
        for (var i = 0; i < vars.length; i++) {
