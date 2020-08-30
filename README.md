@@ -16,4 +16,5 @@ $('#test') // Equivalent of document.querySelectorAll()
 Q('q') // Method to get query variable, without decodeURIComponent()
 GQ()['q'] // Alternate method 1
 GQ().q // Alternate method 2
+GQ() // If there is no query, throws error, otherwise returns object
 ```
