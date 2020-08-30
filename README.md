@@ -11,7 +11,7 @@ Code (for developers)
 ====
 Abbreviated function names
 --------------------------
-```lang-js
+```js
 $('#test') // Equivalent of document.querySelectorAll()
 Q('q') // Method to get query variable, without decodeURIComponent()
 GQ()['q'] // Alternate method 1
