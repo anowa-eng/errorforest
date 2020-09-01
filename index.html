@@ -7,9 +7,11 @@
   />
   <meta charset="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.x-git.min.js"></script>
   <script src="chris.js"></script>
   <script src="gq.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <title>Errorforest</title>
   <style>
     body {
@@ -104,7 +106,7 @@
 </head>
 <body>
   <nav>
-    <div class="navigation-bar" onclick="NAVBAR_CLICKED = true;" data-role="navbar" style="position: -webkit-sticky; position: sticky;">
+    <div class="navigation-bar fixed-top" onclick="NAVBAR_CLICKED = true;" data-role="navbar" style="position: -webkit-sticky; position: sticky;">
       <a style="position: absolute; left: 20px; top: 2px;" href>
         <!-- Credit is given to the user Dayton2949 for the Errorforest logo image -->
         <svg 
