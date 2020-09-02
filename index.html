@@ -231,6 +231,15 @@
               <tr>
                 <td>
                   <button class="purple">Done</button>
+                  <script>
+                    $(document).ready(function(){
+                      $('body > div > div.editor > div.inputreq.animate__animated.animate__zoomIn > div:nth-child(3) > table > tbody > tr > td:nth-child(1) > button').click(function(){
+                        $('.editor').children().hide();
+                        $('.editor2').show();
+                        $('.editor2').children().show();
+                      });
+                    });
+                  </script>
                 </td><td>
                   <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq").attr({
                                                                                                      class: "inputreq animate__animated animate__fadeOut"
