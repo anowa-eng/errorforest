@@ -230,15 +230,7 @@
             <tbody>
               <tr>
                 <td>
-                  <button class="purple">Done</button>
-                  <script>
-                    $(document).ready(function(){
-                      $('body > div > div.editor > div.inputreq.animate__animated.animate__zoomIn > div:nth-child(3) > table > tbody > tr > td:nth-child(1) > button').click(function(){
-                        $('.editor').hide();
-                        document.querySelector('.editor2').replaceChild($('.content'))
-                      });
-                    });
-                  </script>
+                  <button class="purple" onclick="document.querySelector('.editor2').replaceChild($('.content'))">Done</button>
                 </td><td>
                   <button class="purple" style="background: linear-gradient(#555, #999);" onclick='$(".inputreq").attr({
                                                                                                      class: "inputreq animate__animated animate__fadeOut"
