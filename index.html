@@ -80,6 +80,7 @@
     text-decoration: underline;
     outline: none;
   }
+  hidden {display: none}
   </style>
   <script>
     var CONTENT = 'main';
@@ -185,34 +186,9 @@
             </td></tr><tr><td>
               <p>or...</p>
             </td></tr><tr><td>
-              <div class="purple">Paste JSON</div>
+              <div class="purple">Import JSON</div>
+              <input type="file" class="hidden">
         </div>
-              <input type="text" id="paste">
-              <script>
-                // jackocnr
-               $(document).ready(function() {
-                  var ctrlDown = false,
-                      ctrlKey = 17,
-                      cmdKey = 91,
-                      vKey = 86,
-                      cKey = 67;
-                  
-                  $(document).keydown(function(e) {
-                      if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
-                  }).keyup(function(e) {
-                      if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
-                  });
-
-                  $(".no-copy-paste").keydown(function(e) {
-                      if (ctrlDown && (e.keyCode == vKey || e.keyCode == cKey)) return false;
-                  });
-
-                  // Document Ctrl + C/V 
-                  $(document).keydown(function(e) {
-                      if (ctrlDown && (e.keyCode == vKey)) {console.log(JSON.parse($('#paste').val()));}
-                  });
-              });
-              </script>
             </td>
           </tr>
         </tbody>
