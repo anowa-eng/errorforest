@@ -194,7 +194,14 @@
               <p>or...</p>
             </td></tr><tr><td>
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
-              <input type="file" class="hidden" onchange="let xhttp = new XMLHttpRequest(); xhttp.open('GET', 'uploads/upload.php'); xhttp.send();" name="import_editor">
+              <form action="uploads/upload.php">
+                <input type="file" class="hidden"
+                       onchange="
+                                 getElementByName('submit_json').click();
+                                 " name="import_editor"
+                       accept="application/json">
+                <input type="submit" name="submit_json" class=hidden>
+              </form>
         </div>
             </td>
           </tr>
