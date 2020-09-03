@@ -1,1 +1,1 @@
-var_dump($_FILES);
+console_log($_FILES)
