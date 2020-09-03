@@ -85,10 +85,9 @@
   <script>
     var CONTENT = 'main';
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function(e) {
       if(this.readyState == 4 && this.status == 200) {
-        document.querySeletor('[name="import_editor"]').innerHTML =
-          this.responseText;
+        console.log(`%cGet "\n${this.responseText}\n"`, 'color: rgb(199, 143, 0);')
       }
     };
   </script>
