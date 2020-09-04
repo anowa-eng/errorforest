@@ -5,10 +5,11 @@ var $_POST = () => {
   else return document.querySelectorAll(`*[name="${arguments[0]}"]`)
 }
 var $_FILES = $_POST('import_editor').files;
+// Anonymous
 const formData = new FormData();
 formData.append('upload', $_FILES[0]);
 
-fetch('/saveImage', {
+fetch('/uploads/saveImage', {
     method: 'POST',
     body: formData
   })
