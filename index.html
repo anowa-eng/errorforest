@@ -193,7 +193,7 @@
               <p>or...</p>
             </td></tr><tr><td>
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
-              <form action="uploads/upload.js">
+              <form onsubmit="xhttp.open('uploads/upload.js'); xhttp.send(); eval(xhttp.responseText);">
                 <input type="file" class="hidden"
                        onchange="
                                  document.querySelector(`[name='submit_json']`).click();
