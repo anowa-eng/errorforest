@@ -101,11 +101,11 @@
     });
   </script>
   <script>
-    switch (window.location.href) {
-      case 'https://anowa-eng.github.io/errorforest/':
+    switch (window.location.hash.replace(/^#/, '')) {
+      case new String():
         CONTENT = 'main';
         break;
-    case 'https://anowa-eng.github.io/errorforest/#editor':
+      case 'editor':
         CONTENT = 'editor';
         break;
     }
