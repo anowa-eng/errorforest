@@ -194,7 +194,7 @@
                 <input type="file" class="hidden"
                        onchange="
                                  var formData = new FormData();
-                                 formData.append(this.files);
+                                 formData.append('import_editor', this.files);
                                  console.log(formData);
                                  " name="import_editor"
                        accept="application/json">
