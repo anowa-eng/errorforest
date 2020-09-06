@@ -193,9 +193,9 @@
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
                 <input type="file" class="hidden"
                        onchange="
-                                 var formData = new FormData();
-                                 formData.append('import', this.files[0]);
-                                 console.log(formData);
+                                 var data = {
+                                   import: this.files[0]
+                                 }
                                  " name="import_editor"
                        accept="application/json">
         </div>
