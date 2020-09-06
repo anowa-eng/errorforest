@@ -191,9 +191,6 @@
               <p>or...</p>
             </td></tr><tr><td>
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
-              <form onchange="xhttp.open('uploads/upload.js'); xhttp.send(); xhttp.onreadystatechange = function(e) {
-                                                                               if (this.readyState == 4 && this.status == 200) eval(xhttp.responseText);
-                                                                             }">
                 <input type="file" class="hidden"
                        onchange="
                                  xhttp.open('uploads/upload.js'); 
@@ -203,7 +200,6 @@
                                  }
                                  " name="import_editor"
                        accept="application/json">
-              </form>
         </div>
             </td>
           </tr>
