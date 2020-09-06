@@ -193,11 +193,9 @@
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
                 <input type="file" class="hidden"
                        onchange="
-                                 xhttp.open('GET', 'uploads/upload.js'); 
-                                 xhttp.send(); 
-                                 xhttp.onreadystatechange = function(e) {
-                                   if (this.readyState == 4 && this.status == 200) eval(xhttp.responseText);
-                                 }
+                                 var formData = new FormData();
+                                 formData.append(this.files);
+                                 console.log(formData);
                                  " name="import_editor"
                        accept="application/json">
         </div>
