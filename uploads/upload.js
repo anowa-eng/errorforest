@@ -4,19 +4,7 @@ function $_POST() {
   else if (arguments.length > 1) throw new Error('$_POST() needs only one parameter')
   else return document.querySelectorAll(`*[name="${arguments[0]}"]`)
 }
-var $_FILES = $_POST('import_editor').files;
 // Anonymous
 const formData = new FormData();
-formData.append('upload', $_FILES[0]);
-
-fetch('/uploads/saveImage', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => {
-    console.error(error)
-  });
+formData.append('upload', $_POST('import_editor').files[0]);
+console.log(formData);
