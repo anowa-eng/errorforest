@@ -199,7 +199,7 @@
                                  var contentGet = new FileReader();
                                  contentGet.readAsText(data.import);
                                  contentGet.onload = function() {
-                                   console.log(this.result);
+                                   var VIDEO = JSON.parse(this.result);
                                  }
                                  " name="import_editor"
                        accept="application/json">
