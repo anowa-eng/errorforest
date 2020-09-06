@@ -10,8 +10,6 @@
   <script src="chris.js"></script>
   <script src="gq.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <title>Errorforest</title>
   <style>
     body {
@@ -87,7 +85,7 @@
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(e) {
       if(this.readyState == 4 && this.status == 200) {
-        console.log(`%cGet "\n${this.responseText}\n"`, 'color: rgb(199, 143, 0);')
+        console.log(this.responseText)
       }
     };
   </script>
@@ -102,7 +100,7 @@
   </script>
   <script>
     switch (window.location.hash.replace(/^#/, '')) {
-      case new String():
+      case '':
         CONTENT = 'main';
         break;
       case 'editor':
@@ -193,7 +191,9 @@
               <p>or...</p>
             </td></tr><tr><td>
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
-              <form onsubmit="xhttp.open('uploads/upload.js'); xhttp.send(); eval(xhttp.responseText);">
+              <form onsubmit="xhttp.open('uploads/upload.js'); xhttp.send(); xhttp.onreadystatechange = function(e) {
+                                                                               if (this.readyState == 4 && this.status == 200) eval(xhttp.responseText);
+                                                                             }">
                 <input type="file" class="hidden"
                        onchange="
                                  document.querySelector(`[name='submit_json']`).click();
