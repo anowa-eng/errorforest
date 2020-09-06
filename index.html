@@ -195,6 +195,11 @@
                        onchange="
                                  var data = {
                                    import: this.files[0]
+                                 };
+                                 var contentGet = new FileReader();
+                                 contentGet.readAsText(data.import);
+                                 contentGet.onload = function() {
+                                   console.log(this.result);
                                  }
                                  " name="import_editor"
                        accept="application/json">
