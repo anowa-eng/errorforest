@@ -201,9 +201,11 @@
                                  contentGet.onload = function() {
                                    var VIDEO = JSON.parse(this.result);
                                  }
-                                 $(document.querySelectorAll('.u')[0]).show();
-                                 if (data.import.name == new String()) {
-                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input')
+                                 $(document.querySelector('.editor2')).show();
+                                 if (data['import'].name == new String()) {
+                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = 'Unnamed Error';
+                                 } else {
+                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = data['import'].name;
                                  }
                                  " name="import_editor"
                        accept="application/json">
