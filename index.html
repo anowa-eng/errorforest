@@ -196,8 +196,11 @@
                        accept="application/json">
           <script>
             $("body > div > div.editor > table > tbody > tr:nth-child(3) > td > button").change(function(){
+              $(this).error(function(){
+                $('body > div > div.editor > table').append()
+              });
               var data = {
-                import: this.files[0]
+                import: document.querySelectorAll('input[type="file"]')[0].files[0]
               };
               var contentGet = new FileReader();
               contentGet.readAsText(data.import);
