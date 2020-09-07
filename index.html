@@ -205,7 +205,9 @@
                                  if (data['import'].name == new String()) {
                                    document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = 'Unnamed Error';
                                  } else {
-                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = data['import'].name;
+                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input').value
+                                     = data['import'].name
+                                       .replace(/\.\w+$/g, '');
                                  }
                                  " name="import_editor"
                        accept="application/json">
