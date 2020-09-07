@@ -196,7 +196,7 @@
                        accept="application/json">
           <script>
             $("body > div > div.editor > table > tbody > tr:nth-child(3) > td > button").change(function(){
-              $(this).error(function(){
+              $(this).on("error", function(){
                 $('body > div > div.editor > table').append()
               });
               var data = {
