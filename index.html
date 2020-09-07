@@ -192,25 +192,27 @@
             </td></tr><tr><td>
               <button class="purple" onclick="document.querySelector('.hidden').click();">Import JSON</div>
                 <input type="file" class="hidden"
-                       onchange="
-                                 var data = {
-                                   import: this.files[0]
-                                 };
-                                 var contentGet = new FileReader();
-                                 contentGet.readAsText(data.import);
-                                 contentGet.onload = function() {
-                                   var VIDEO = JSON.parse(this.result);
-                                 }
-                                 $(document.querySelector('.editor2')).show();
-                                 if (data['import'].name == new String()) {
-                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = 'Unnamed Error';
-                                 } else {
-                                   document.querySelector('body > div > div.editor > div.editor2.hidden > input').value
-                                     = data['import'].name
-                                       .replace(/\.\w+$/g, '');
-                                 }
-                                 " name="import_editor"
+                       name="import_editor"
                        accept="application/json">
+          <script>
+            $("body > div > div.editor > table > tbody > tr:nth-child(3) > td > button").change(function(){
+              var data = {
+                import: this.files[0]
+              };
+              var contentGet = new FileReader();
+              contentGet.readAsText(data.import);
+              contentGet.onload = function() {
+                var VIDEO = JSON.parse(this.result);
+              }
+              $(document.querySelector('.editor2')).show();
+              if(data['import'].name == new String()) {
+                document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = 'Unnamed Error';
+              } else {
+                document.querySelector('body > div > div.editor > div.editor2.hidden > input').value = data['import'].name
+                  .replace(/\.\w+$/g, '');
+              }
+            });
+          </script>
         </div>
             </td>
           </tr>
