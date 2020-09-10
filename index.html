@@ -221,8 +221,12 @@
               }
             });
             $("body > div > div.editor > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1) > button").click(function(){
-              $('.editor2').removeClass('hidden');
-              if(document.querySelector('body > div > div.editor > div > div:nth-child(2) > input').value == new String()) {
+              $('.inputreq')
+                .eq(0)
+                .removeClass('animate__zoomIn')
+                .addClass('animate__fadeOut')
+              $(document.querySelector('.editor2')).removeClass('hidden');
+              if($('body > div > div.editor > div.inputreq.animate__animated.animate__zoomIn > div:nth-child(2)').val() == new String()) {
                 document.querySelector('body > div > div.editor > div.editor2 > input').value = 'Unnamed Error';
               } else {
                 document.querySelector('body > div > div.editor > div.editor2 > input').value = data['import'].name
