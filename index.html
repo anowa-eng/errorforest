@@ -199,10 +199,11 @@
             $("body > div > div.editor > table > tbody > tr:nth-child(3) > td > button").change(function(){
               $(this).on("error", function(){
                 $('body > div > div.editor > table').append(document.createElement('span'));
-                $('body > div > div.editor > table > span').css({
-                  "color": "red"
-                })
-                $('body > div > div.editor > table > span').text('An error has occured.');
+                $('body > div > div.editor > table > span')
+                  .css({
+                    "color": "red"
+                  })
+                  .text('An error has occured.');
               });
               var data = {
                 import: document.querySelectorAll('input[type="file"]')[0].files[0]
@@ -221,16 +222,16 @@
               }
             });
             $("body > div > div.editor > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1) > button").click(function() {
-              $(".inputreq").attr({
+              $('.inputreq').eq(0).attr({
                 class: "inputreq animate__animated animate__fadeOut"
               });
               setTimeout(function() {
-                $(".inputreq.animate__animated.animate__fadeOut").hide();
-                $(".inputreq.animate__animated.animate__fadeOut").attr({
+                $(".inputreq").eq(0).hide();
+                $(".inputreq").eq(0).attr({
                   class: "inputreq"
                 });
               }, 1000);
-              $(document.querySelector('.editor2')).removeClass('hidden');
+              $('.editor2').removeClass('hidden');
               if($('body > div > div.editor > div.inputreq.animate__animated.animate__zoomIn > div:nth-child(2)').val() == new String()) {
                 document.querySelector('body > div > div.editor > div.editor2 > input').value = 'Unnamed Error';
               } else {
