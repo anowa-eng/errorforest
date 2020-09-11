@@ -221,7 +221,8 @@
                   .replace(/\.\w+$/g, '');
               }
             });
-            $("body > div > div.editor > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1) > button").click(function() {
+            
+            $(".purple").eq(2).click(function() {
               $('.inputreq').eq(0).attr({
                 class: "inputreq animate__animated animate__fadeOut"
               });
@@ -232,7 +233,7 @@
                 });
               }, 1000);
               $('.editor2').removeClass('hidden');
-              if($('body > div > div.editor > div.inputreq.animate__animated.animate__zoomIn > div:nth-child(2)').val() == new String()) {
+              if($('body > div > div.editor > div.inputreq.animate__animated.animate__zoomIn > div:nth-child(2)').val() == '') {
                 document.querySelector('body > div > div.editor > div.editor2 > input').value = 'Unnamed Error';
               } else {
                 document.querySelector('body > div > div.editor > div.editor2 > input').value = data['import'].name
