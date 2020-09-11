@@ -1,6 +1,11 @@
-var code = document.querySelector('e').innerHTML.split('\n');
-var real = code.replace(/(\/\*.*\*\/)|(\/{2}.*)|(#.*)|(\(?[cC][oO]([mM]{2})[eE][nN][tT]\s*([:|-])\s*.*\)?)/g, '');
+var code = document.querySelector("e").innerHTML.split("\n"),
+  real = code.replace(/(\/\*.*\*\/)|(\/{2}.*)|(#.*)|(\(?[cC][oO]([mM]{2})[eE][nN][tT]\s*([:|-])\s*.*\)?)/g, ""),
+    currentLine;
 for (var i = 0; i < real.length; i++) {
   currentLine = real[i];
-  if (/^append(\s*)element(\s*).*/i.test(currentLine))
+  if (/\bappend\b\belement\b.*/i.test(currentLine)) {
+    if (currentLine.includes) {
+    }
+  }
 }
+delete window.i;
