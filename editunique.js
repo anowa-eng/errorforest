@@ -4,6 +4,23 @@ real = real
   .replace(/\bappend\s*.*\b/g, '<')
   .replace(/\belement(.*)\b$/g, '>')
 currentLine;
+const anova01 = {
+  loops: {
+    count: null,
+    repeat(times, f) {
+      count = 1;
+      for (var i; i < times; i++) {
+        f();
+        count++;
+      }
+      delete window.i;
+      count = null;
+    },
+    skip() {
+      count++;
+    }
+  }
+}
 for (var i; i < real.length; i++) {
   
 }
