@@ -7,6 +7,13 @@ var real = document.querySelector('.editor2').innerHTML
   .replace(/(;;)$/, ';'),
 const anova01 = {
   errorforest: {
+    editor2: {
+      preprocessor: {
+        add() {
+          
+        }
+      }
+    }
   },
   loops: {
     count: null,
@@ -26,10 +33,12 @@ const anova01 = {
 }
 const currentLine = real[anova01.loops.count]
 var tasks = new Array();
-var newLine = 
+var newLine = '';
 anova01.loops.repeat(real.length, function(){
   for (const item of currentLine.split(' ') {
     if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
+      if (/append .* element/g.test(item) && /(element)$/g.test(item)) {
+      }
     }
   }
 });
