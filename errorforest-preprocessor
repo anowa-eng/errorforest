@@ -35,10 +35,14 @@ const currentLine = real[anova01.loops.count]
 var tasks = new Array();
 var newLine = '';
 anova01.loops.repeat(real.length, function(){
-  for (const item of currentLine.split(' ') {
+  for (const item of real) {
     if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
       if (/append .* element/g.test(item)) {
-      }
+        if (/(element)$/.test(item)) {
+          document
+            .createElement(item);
+        } else if (/(to ((["'].*["'])|(#[0-9]+))$/g.test(item) 
+      } else if ()
     }
   }
 });
