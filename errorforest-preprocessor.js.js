@@ -37,7 +37,7 @@ var newLine = '';
 anova01.loops.repeat(real.length, function(){
   for (const item of currentLine.split(' ') {
     if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
-      if (/append .* element/g.test(item) && /(element)$/g.test(item)) {
+      if (/append .* element/g.test(item)) {
       }
     }
   }
