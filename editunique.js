@@ -26,16 +26,10 @@ const anova01 = {
 }
 const currentLine = real[anova01.loops.count]
 var tasks = new Array();
+var newLine = 
 anova01.loops.repeat(real.length, function(){
   for (const item of currentLine.split(' ') {
-    switch(item) {
-      case 'append':
-        tasks.push('Make an element');
-        if (currentLine.slice('append'.length) === ';')) throw new Error(`Unexpected semicolon at line number ${anova01.loops.count}`);
-        else {
-          anova01.loops.skip();
-          
-        }
+    if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
     }
   }
 });
