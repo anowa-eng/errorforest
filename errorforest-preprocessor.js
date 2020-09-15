@@ -1,10 +1,3 @@
-var real = document.querySelector('.editor2').innerHTML
-  .replace(/(\/\*.*\*\/)|(\/{2}.*)|(#.*)|(\(?[cC][oO]([mM]{2})[eE][nN][tT]\s*([:|-])\s*.*\)?)/g, '')
-  .replace(/\bappend\s*.*\b/g, '<')
-  .replace(/\belement(.*)\b$/g, '>')
-  .split('\n')
-  .map(i => `${i};`)
-  .replace(/(;;)$/, ';'),
 const anova01 = {
   errorforest: {
     editor2: {
@@ -31,18 +24,26 @@ const anova01 = {
     }
   }
 }
-const currentLine = real[anova01.loops.count]
-var tasks = new Array();
-var newLine = '';
-anova01.loops.repeat(real.length, function(){
-  for (const item of real) {
-    if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
-      if (/append .* element/g.test(item)) {
-        if (/(element)$/.test(item)) {
-          document
-            .createElement(item);
-        } else if (/(to ((["'].*["'])|(#[0-9]+))$/g.test(item) 
-      } else if ()
+
+document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
+  var real = x.innerHTML
+    .replace(/(\/\*.*\*\/)|(\/{2}.*)|(#.*)|(\(?[cC][oO]([mM]{2})[eE][nN][tT]\s*([:|-])\s*.*\)?)/g, '')
+    .replace(/\bappend\s*.*\b/g, '<')
+    .replace(/\belement(.*)\b$/g, '>')
+    .split('\n')
+    .map(i => `${i};`)
+    .replace(/(;;)$/, ';'),
+  const currentLine = real[anova01.loops.count]
+  var tasks = new Array();
+  var newLine = '';
+  anova01.loops.repeat(real.length, function(){
+    for (const item of real) {
+      if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
+        if (item.slice('append'.length) == ';') throw new Error('Unexpected semicolon')
+        else {
+          if item.slice
+        }
+      }
     }
-  }
-});
+  });
+};
