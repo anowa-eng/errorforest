@@ -2,8 +2,9 @@ const anova01 = {
   errorforest: {
     editor2: {
       preprocessor: {
-        add() {
-          
+        root(element) {
+          if (element.hasAttribute('root')) return element.getAttribute('root');
+          else return undefined;
         }
       }
     }
@@ -23,27 +24,30 @@ const anova01 = {
       count++;
     }
   }
-}
+};
 
+var real;
+const currentLine = real[anova01.loops.count];
 document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
-  var real = x.innerHTML
+  real = x.innerHTML
     .replace(/(\/\*.*\*\/)|(\/{2}.*)|(#.*)|(\(?[cC][oO]([mM]{2})[eE][nN][tT]\s*([:|-])\s*.*\)?)/g, '')
     .replace(/\bappend\s*.*\b/g, '<')
     .replace(/\belement(.*)\b$/g, '>')
     .split('\n')
     .map(i => `${i};`)
-    .replace(/(;;)$/, ';'),
-  const currentLine = real[anova01.loops.count]
-  var tasks = new Array();
-  var newLine = '';
+    .replace(/((;;)$)|(};(;?))/, ';')
   anova01.loops.repeat(real.length, function(){
-    for (const item of real) {
-      if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
-        if (item.slice('append'.length) == ';') throw new Error('Unexpected semicolon')
+    rt = anova01.errorforest.editor2.preprocessor.root(x) ? document.querySelector(x.getAttribute('root')) : document.body;
+    // Execute lines one by one
+      if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(currentLine)) {
+        if (!(currentLine.split(' ').filter(i => i != new String())[1])) throw new Error('Unexpected semicolon');
         else {
-          if (/to/)
+          window[`E${rt.children.length}`]  = document.createElement(
+            currentLine.split(' ').filter(i => i != new String())[1]
+          );
+          window[`E${rt.children.length}`].appendChild(rt);
+          window[`E${rt.children.length}`].setAttribute('errorforest-preprocessor-append-status', 'append');
         }
       }
-    }
-  });
-};
+	});
+});
