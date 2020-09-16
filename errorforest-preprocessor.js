@@ -41,7 +41,7 @@ document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
       if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(item)) {
         if (item.slice('append'.length) == ';') throw new Error('Unexpected semicolon')
         else {
-          if item.slice
+          if (/to/)
         }
       }
     }
