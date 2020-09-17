@@ -39,14 +39,19 @@ document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
   anova01.loops.repeat(real.length, function(){
     rt = anova01.errorforest.editor2.preprocessor.root(x) ? document.querySelector(x.getAttribute('root')) : document.body;
     // Execute lines one by one
-      if (/append .* element (to ((["'].*["'])|(#[0-9]+)?) (as [a-zA-Z0-9_]+)?)/g.test(currentLine)) {
+      if (/append(\s*).*(\s*)element(\s*)(to(\s*)((["'].*["'])|(#[0-9]+)?)(\s*)(as(\s*)[a-zA-Z0-9_]+)?)/g.test(currentLine)) {
         if (!(currentLine.split(' ').filter(i => i != new String())[1])) throw new Error('Unexpected semicolon');
         else {
           window[`E${rt.children.length}`]  = document.createElement(
             currentLine.split(' ').filter(i => i != new String())[1]
           );
-          window[`E${rt.children.length}`].appendChild(rt);
           window[`E${rt.children.length}`].setAttribute('errorforest-preprocessor-append-status', 'append');
+	  if (!window['A']) const A = document.querySelector('[errorforest-preprocessor-append-status]');
+	  if (/(to(\s*).*)$/.test(currentLine)) {
+	    if (document.querySelectorAll(currentLine
+					  .slice('')
+					 ).length > 1)
+	  }
         }
       }
 	});
