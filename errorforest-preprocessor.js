@@ -48,9 +48,8 @@ document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
           window[`E${rt.children.length}`].setAttribute('errorforest-preprocessor-append-status', 'append');
 	  if (!window['A']) const A = document.querySelector('[errorforest-preprocessor-append-status]');
 	  if (/(to(\s*).*)$/.test(currentLine)) {
-	    if (document.querySelectorAll(currentLine
-					  .slice('')
-					 ).length > 1)
+	    if (document.querySelectorAll(currentLine.slice('')).length > 1) {
+	    }
 	  }
         }
       }
