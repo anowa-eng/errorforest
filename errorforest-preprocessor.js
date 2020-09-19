@@ -26,9 +26,9 @@ const anova01 = {
   }
 };
 
-var real;
-const currentLine = real[anova01.loops.count];
+var real, currentLine;
 document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
+  currentLine = real[anova01.loops.count];
   real = x.innerHTML
     .replace(/(\/\*.*\*\/)|(\/{2}.*)|(#.*)|(\(?[cC][oO]([mM]{2})[eE][nN][tT]\s*([:|-])\s*.*\)?)/g, '')
     .replace(/\bappend\s*.*\b/g, '<')
