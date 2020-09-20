@@ -46,9 +46,14 @@ document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
             currentLine.split(' ').filter(i => i != new String())[1]
           );
           window[`E${rt.children.length}`].setAttribute('errorforest-preprocessor-append-status', 'append');
-	  if (!window['A']) const A = document.querySelector('[errorforest-preprocessor-append-status]');
+	  if (!window['A']) var A = document.querySelector('[errorforest-preprocessor-append-status]');
 	  if (/(to(\s*).*)$/.test(currentLine)) {
-	    if (document.querySelectorAll(currentLine.slice(indexOf('to').replace(/^(to)/, ''))).length == 0) throw new Error(`Reads ${3}`)
+	    if (document.querySelectorAll(currentLine.slice(currentLine.indexOf('to')).replace(/^(to)/, '')).length == 0) throw new Error(`Reads "append _ to": no "to" parameter is given`);
+            else {
+	      if (/#[0-9]+/.test(currentLine.indexOf('to')).replace(/^(to)/, '')))) {
+		if (currentLine.indexOf('to')).replace(/^(to )/, '') == '#0') throw new Error('The ErrorForest language does not use zero-based index.')
+	      }
+	    }
 	  }
         }
       }
