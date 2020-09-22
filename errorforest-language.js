@@ -50,7 +50,7 @@ document.querySelectorAll('errorforest-preprocessor').forEach(function(x){
 	  if (/(to(\s*).*)$/.test(currentLine)) {
 	    if (document.querySelectorAll(currentLine.slice(currentLine.indexOf('to')).replace(/^(to)/, '')).length == 0) throw new Error(`Reads "append _ to": no "to" parameter is given`);
             else {
-	      if (/#[0-9]+/.test(currentLine.indexOf('to')).replace(/^(to)/, '')))) {
+	      if (/#[0-9]+/.test(currentLine.split(' ').pop())) {
 		if (currentLine.indexOf('to')).replace(/^(to )/, '') == '#0') throw new Error('The ErrorForest language does not use zero-based index.')
 	      }
 	    }
